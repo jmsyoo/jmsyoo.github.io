@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Enhancement Three — Databases</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+<header class="site-header">
+  <h1>Enhancement Three — Databases</h1>
+  <nav class="top-nav">
+    <a href="/">Home</a><a href="/artifacts/">Artifacts</a><a href="/code-review/">Code Review</a>
+  </nav>
+</header>
+<main class="content">
+  <article class="card">
+    <h2>Artifact Description</h2>
+    <p>
+      Database layer behind verification and selling flows. Examples are sanitized with fake data.
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>Improvements</h2>
+    <ul>
+      <li><strong>Integrity & Safety:</strong> unique SerialNumber; CHECK constraints for enums/amounts; strong FKs; optional optimistic locking.</li>
+      <li><strong>Performance:</strong> targeted indexes on hot paths; parameterized queries; bounded IN-lists via batching upstream.</li>
+      <li><strong>Transactional Correctness:</strong> single transaction + row locks; optional idempotency keys for safe retries.</li>
+    </ul>
+  </article>
+
+  <article class="card">
+    <h2>Outcomes & Reflection</h2>
+    <p>
+      This demonstrates software engineering/database outcomes and a security mindset.
+      The hardest parts were concurrency and choosing practical indexes; I kept the set minimal yet aligned to access patterns.
+    </p>
+  </article>
+
+  <p class="meta">
+    Download: <a href="https://github.com/jmsyoo/eportfolio-artifacts/releases/latest" target="_blank" rel="noopener">Enhanced ZIP (sanitized)</a>
+  </p>
+</main>
+<footer class="site-footer"><small>© James Yoo</small></footer>
+</body>
+</html>

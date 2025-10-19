@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Enhancement Two — Algorithms & Data Structures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+<header class="site-header">
+  <h1>Enhancement Two — Algorithms & Data Structures</h1>
+  <nav class="top-nav">
+    <a href="/">Home</a><a href="/artifacts/">Artifacts</a><a href="/code-review/">Code Review</a>
+  </nav>
+</header>
+<main class="content">
+  <article class="card">
+    <h2>Artifact Overview</h2>
+    <p>
+      The verification endpoint accepts a batch of serials and returns status, denomination, and by-denomination summary.
+      I target predictable O(n) behavior with minimal memory churn in a realistic batch lookup scenario.
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>What I Improved</h2>
+    <ul>
+      <li><strong>Single-pass aggregation:</strong> build results and summaries in one walk over the original order.</li>
+      <li><strong>Hash/Set driven lookups:</strong> hash map for O(1) hits; Set to dedupe before querying.</li>
+      <li><strong>Guardrails & batching:</strong> max size, light format checks, chunked DB lookups; optional check-digit validation.</li>
+    </ul>
+    <p>Together these changes stabilize time/space usage, preserve order, and make the system robust under heavy inputs.</p>
+  </article>
+
+  <article class="card">
+    <h2>Course Outcomes & Reflection</h2>
+    <p>
+      I applied data-structure choices (hashes, sets, defaulted maps) and simplified the pipeline to a single pass.
+      The main challenge was balancing strict validation with usability, which I resolved by keeping validation configurable.
+    </p>
+  </article>
+
+  <p class="meta">
+    Download: <a href="https://github.com/jmsyoo/eportfolio-artifacts/releases/latest" target="_blank" rel="noopener">Enhanced ZIP (sanitized)</a>
+  </p>
+</main>
+<footer class="site-footer"><small>© James Yoo</small></footer>
+</body>
+</html>

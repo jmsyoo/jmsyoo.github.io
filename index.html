@@ -4,72 +4,49 @@
   <meta charset="utf-8" />
   <title>James Yoo — CS 499 ePortfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <link href="/assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
   <header class="site-header">
     <h1>James Yoo — CS 499 ePortfolio</h1>
-    <p class="tagline">Software Engineering · Algorithms & Data Structures · Databases</p>
-    <nav class="nav">
-      <a href="./video/index.html">Code Review Video</a>
-      <a href="#artifacts">Artifacts</a>
-      <a href="#self-assessment">Professional Self-Assessment</a>
-      <a href="https://github.com/jmsyoo/jmsyoo.github.io" target="_blank">GitHub Repository</a>
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="/artifacts/">Artifacts</a>
+      <a href="/code-review/">Code Review</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section id="self-assessment" class="card">
+  <main class="content">
+    <section class="hero">
       <h2>Professional Self-Assessment</h2>
       <p>
-        I am a senior software engineer with 10+ years of experience building data-driven systems.
-        This portfolio highlights my work in software design, algorithms and data structures, and databases.
-        It showcases how I approached real-world constraints—clarity of design, input validation, concurrency,
-        and data integrity—while keeping the codebase testable and maintainable.
+        I’m a software engineer with 10+ years of experience building data-driven, secure systems.
+        This portfolio highlights enhancements across software design & engineering, algorithms & data structures,
+        and databases. I focus on clear architecture, predictable performance, and security-minded development.
       </p>
-      <ul class="bullets">
-        <li>Collaboration & communication with clear contracts and documentation</li>
-        <li>Algorithmic thinking and practical efficiency (batching, O(1) lookups)</li>
-        <li>Secure, transactional design with idempotency and locking</li>
-      </ul>
-      <p class="note">
-        Full narratives are linked in each artifact section below.
+      <p>
+        In this program, I refined core CS skills and paired them with practical patterns—service layering,
+        transactional safety, and careful data modeling. You’ll find concise narratives for each artifact,
+        before/after rationale, and links to the full source (sanitized) and my code review video.
       </p>
+      <div class="cta-row">
+        <a class="btn" href="/artifacts/">View Artifacts</a>
+        <a class="btn ghost" href="/code-review/">Watch Code Review</a>
+      </div>
     </section>
 
-    <section id="artifacts" class="grid">
-      <article class="card">
-        <h3>Enhancement 1 — Software Design & Engineering</h3>
-        <p>Gift Certificate Management (controller → service → repository → serializer), error contracts, idempotency, and locking.</p>
-        <div class="actions">
-          <a class="btn" href="./enhancement1/index.html">View Artifact</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>Enhancement 2 — Algorithms & Data Structures</h3>
-        <p>VerifySerials: single-pass aggregation, Set-based dedupe, hash indexing, batching, and mod-10 check digit.</p>
-        <div class="actions">
-          <a class="btn" href="./enhancement2/index.html">View Artifact</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>Enhancement 3 — Databases</h3>
-        <p>Indexes, constraints, transactional correctness, and idempotency keys; DB-conscious service integration.</p>
-        <div class="actions">
-          <a class="btn" href="./enhancement3/index.html">View Artifact</a>
-        </div>
-      </article>
+    <section>
+      <h3>Specialization</h3>
+      <ul>
+        <li>Full-stack software engineering with a focus on data and security</li>
+        <li>API design, transactional workflows, and database performance</li>
+        <li>Clear communication: diagrams, contracts, and testable designs</li>
+      </ul>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="y"></span> James Yoo</p>
+    <small>© James Yoo</small>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

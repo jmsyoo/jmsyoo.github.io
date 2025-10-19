@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Enhancement One — Software Design & Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+<header class="site-header">
+  <h1>Enhancement One — Software Design & Engineering</h1>
+  <nav class="top-nav">
+    <a href="/">Home</a><a href="/artifacts/">Artifacts</a><a href="/code-review/">Code Review</a>
+  </nav>
+</header>
+<main class="content">
+  <article class="card">
+    <h2>Why This Artifact & What It Showcases</h2>
+    <p>
+      This backend workflow highlights real design choices: request validation, transactional safety, and stable API contracts.
+      I demonstrate separation of concerns (Controller → Service → Serializer), defensive programming (guardrails, format checks),
+      and concurrency safety (row-level locking). The goal is production-minded code that’s still easy to maintain and test.
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>How the Artifact Was Improved</h2>
+    <ul>
+      <li>Controller delegates business logic to Services; Serializers fix response shape (contract-first).</li>
+      <li>Verification flow adds input guardrails, optional format validation, and a true single-pass aggregation.</li>
+      <li>Mark-sold flow wraps state transition in one transaction and uses row-level locks to prevent double-selling.</li>
+      <li>Optional idempotency key for safe retries; standardized error envelopes.</li>
+    </ul>
+  </article>
+
+  <article class="card">
+    <h2>Course Outcomes & Reflection</h2>
+    <p>
+      I strengthened design and evaluation of solutions by restructuring for maintainability and performance,
+      applied solid software engineering techniques (service layering, contracts, transactional boundaries),
+      and improved security posture with validation and locking. Biggest lesson: small architectural changes
+      have big downstream benefits; clear boundaries made testing and reasoning easier.
+    </p>
+  </article>
+
+  <p class="meta">
+    Download: <a href="https://github.com/jmsyoo/eportfolio-artifacts/releases/latest" target="_blank" rel="noopener">Enhanced ZIP (sanitized)</a>
+  </p>
+</main>
+<footer class="site-footer"><small>© James Yoo</small></footer>
+</body>
+</html>
